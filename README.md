@@ -7,13 +7,13 @@ A clean and minimal formal letter template for Typst, featuring a colored header
 Start a new project from the template with the following command:
 
 ```shell
-typst init @preview/remetente:0.1.0
+typst init @preview/remetente:0.2.0
 ```
 
 The template will initialize your package with a sample call to the `letter` function in a `show` rule:
 
 ```typst
-#import "@preview/remetente:0.1.0": letter
+#import "@preview/remetente:0.2.0": letter
 
 #show: letter.with(
   // Sender address displayed at the top right of the first page

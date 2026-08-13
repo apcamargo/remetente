@@ -1,4 +1,4 @@
-#import "@preview/remetente:0.1.0": letter
+#import "@preview/remetente:0.2.0": letter
 
 #show: letter.with(
   // Sender address displayed at the top right of the first page
