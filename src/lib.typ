@@ -1,4 +1,4 @@
-/// Typesets a letter with a coloured header band, a sender address,
+/// Typesets a letter with a colored header band, a sender address,
 /// a date, and a closing signature block.
 ///
 /// The letter's content is passed as the `body` positional argument.
@@ -39,16 +39,20 @@
   ///
   /// -> none | str | content | array
   signature: none,
-  /// Content displayed in the coloured band at the top of each page.
-  /// If `none`, the band still renders with the selected background
-  /// colour.
+  /// Content displayed in the colored header band at the top of each
+  /// page. If `none`, the band still renders with the selected
+  /// background color.
   ///
   /// -> none | content
-  band-content: none,
-  /// Fill colour of the header band.
+  header-band-content: none,
+  /// Fill color of the colored header band.
   ///
   /// -> color
-  header-background: oklch(95.6%, 0.005, 286deg),
+  header-band-background: oklch(95.6%, 0.005, 286deg),
+  /// Height of the colored header band.
+  ///
+  /// -> length
+  header-band-height: 2.8cm,
   /// Font used throughout the letter.
   ///
   /// -> str | array
@@ -65,7 +69,7 @@
   ///
   /// -> length
   spacing: 1.3em,
-  /// Colour used for links inside the letter.
+  /// color used for links inside the letter.
   ///
   /// -> color
   link-font-color: oklch(62.3%, 0.064, 241deg),
@@ -86,8 +90,7 @@
     date = instant.display()
   }
 
-  let header-band-height = 2.8cm
-  let header-band-clearance = 1.15cm
+  let header-band-clearance = 1.75cm
   let x-margin = 3cm
   let bottom-margin = 3.3cm
   // If the header band is only drawn on the first page, the top margin
@@ -96,7 +99,7 @@
   let top-margin = if first-page-header {
     bottom-margin
   } else {
-    bottom-margin + header-band-clearance
+    header-band-height + header-band-clearance
   }
 
   // Configure page and text properties.
@@ -114,13 +117,13 @@
           rect(
             width: 100%,
             height: header-band-height,
-            fill: header-background,
+            fill: header-band-background,
           ),
         )
         place(
           top + left,
           box(width: 100%, height: header-band-height, inset: (x: x-margin, y: 0pt))[
-            #align(horizon)[#band-content]
+            #align(horizon)[#header-band-content]
           ]
         )
       }

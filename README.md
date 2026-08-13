@@ -41,7 +41,7 @@ The template will initialize your package with a sample call to the `letter` fun
   // Letter's closing signature(s)
   signature: [Sender's Name],
   // Content displayed in the colored band at the top of the page
-  band-content: text(fill: rgb("#2B58A2"), weight: "bold", size: 20pt)[Logo],
+  header-band-content: text(fill: rgb("#2B58A2"), weight: "bold", size: 20pt)[Logo],
   // Only draw the header band on the first page
   first-page-header: true,
 )
@@ -56,20 +56,21 @@ Sincerely,
 
 ## API documentation
 
-| Argument            | Type                                             | Default                       | Description                                                                        |
-| ------------------- | ------------------------------------------------ | ----------------------------- | ---------------------------------------------------------------------------------- |
-| `paper`             | `str`                                            | `"a4"`                        | Paper size                                                                         |
-| `sender-address`    | `none` / `str` / `content`                       | `none`                        | Sender address shown at the top right of the page                                  |
-| `recipient-address` | `none` / `str` / `content`                       | `none`                        | Recipient address shown below the sender address                                   |
-| `date`              | `auto` / `datetime` / `str` / `content` / `none` | `auto`                        | Date shown under the address(es)                                                   |
-| `subject`           | `none` / `content`                               | `none`                        | Subject line displayed in bold above the letter's content                          |
-| `signature`         | `none` / `str` / `content` / `array`             | `none`                        | Closing signature(s). If an array is provided, the elements are laid out in a grid |
-| `band-content`      | `none` / `content`                               | `none`                        | Content drawn in the colored band                                                  |
-| `header-background` | `color`                                          | `oklch(95.6%, 0.005, 286deg)` | Fill color of the header band                                                      |
-| `font`              | `str` / `array`                                  | `Libertinus Serif`            | Font used throughout the letter                                                    |
-| `font-size`         | `length`                                         | `11.25pt`                     | Base font size                                                                     |
-| `leading`           | `length`                                         | `0.715em`                     | Line spacing                                                                       |
-| `spacing`           | `length`                                         | `1.3em`                       | Paragraph spacing                                                                  |
-| `link-font-color`   | `color`                                          | `oklch(62.3%, 0.064, 241deg)` | Color of links inside the letter                                                   |
-| `first-page-header` | `boolean`                                        | `false`                       | Only draw the header band on the first page                                        |
-| `body`              | `content`                                        | -                             | The letter's content                                                               |
+| Argument                 | Type                                             | Default                       | Description                                                                        |
+| ------------------------ | ------------------------------------------------ | ----------------------------- | ---------------------------------------------------------------------------------- |
+| `paper`                  | `str`                                            | `"a4"`                        | Paper size                                                                         |
+| `sender-address`         | `none` / `str` / `content`                       | `none`                        | Sender address shown at the top right of the page                                  |
+| `recipient-address`      | `none` / `str` / `content`                       | `none`                        | Recipient address shown below the sender address                                   |
+| `date`                   | `auto` / `datetime` / `str` / `content` / `none` | `auto`                        | Date shown under the address(es)                                                   |
+| `subject`                | `none` / `content`                               | `none`                        | Subject line displayed in bold above the letter's content                          |
+| `signature`              | `none` / `str` / `content` / `array`             | `none`                        | Closing signature(s). If an array is provided, the elements are laid out in a grid |
+| `header-band-content`    | `none` / `content`                               | `none`                        | Content drawn in the colored header band                                           |
+| `header-band-background` | `color`                                          | `oklch(95.6%, 0.005, 286deg)` | Fill color of the colored header band                                              |
+| `header-band-height`     | `length`                                         | `11.25pt`                     | Height of the colored header band                                                  |
+| `font`                   | `str` / `array`                                  | `Libertinus Serif`            | Font used throughout the letter                                                    |
+| `font-size`              | `length`                                         | `11.25pt`                     | Base font size                                                                     |
+| `leading`                | `length`                                         | `0.715em`                     | Line spacing                                                                       |
+| `spacing`                | `length`                                         | `1.3em`                       | Paragraph spacing                                                                  |
+| `link-font-color`        | `color`                                          | `oklch(62.3%, 0.064, 241deg)` | Color of links inside the letter                                                   |
+| `first-page-header`      | `boolean`                                        | `false`                       | Only draw the header band on the first page                                        |
+| `body`                   | `content`                                        | -                             | The letter's content                                                               |

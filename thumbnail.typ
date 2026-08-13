@@ -5,7 +5,7 @@
     Fulano de Tal \
     #emph[
       1 Example Street \
-      Sampleton, Sampleshire \
+      Sampleton\
       WX1 2YZ
     ]
   ],
@@ -24,7 +24,7 @@
     Fulano de Tal \
     _Minister of Placeholders_
   ],
-  band-content: image("assets/logo.svg", width: 2.4cm),
+  header-band-content: image("assets/logo.svg", width: 2.4cm),
 )
 
 Dear Ciclano,
