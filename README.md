@@ -66,7 +66,7 @@ Sincerely,
 | `signature`              | `none` / `str` / `content` / `array`             | `none`                        | Closing signature(s). If an array is provided, the elements are laid out in a grid |
 | `header-band-content`    | `none` / `content`                               | `none`                        | Content drawn in the colored header band                                           |
 | `header-band-background` | `color`                                          | `oklch(95.6%, 0.005, 286deg)` | Fill color of the colored header band                                              |
-| `header-band-height`     | `length`                                         | `11.25pt`                     | Height of the colored header band                                                  |
+| `header-band-height`     | `length`                                         | `2.8cm`                       | Height of the colored header band                                                  |
 | `font`                   | `str` / `array`                                  | `Libertinus Serif`            | Font used throughout the letter                                                    |
 | `font-size`              | `length`                                         | `11.25pt`                     | Base font size                                                                     |
 | `leading`                | `length`                                         | `0.715em`                     | Line spacing                                                                       |
