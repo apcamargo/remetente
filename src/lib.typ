@@ -122,9 +122,12 @@
         )
         place(
           top + left,
-          box(width: 100%, height: header-band-height, inset: (x: x-margin, y: 0pt))[
+          box(width: 100%, height: header-band-height, inset: (
+            x: x-margin,
+            y: 0pt,
+          ))[
             #align(horizon)[#header-band-content]
-          ]
+          ],
         )
       }
     },

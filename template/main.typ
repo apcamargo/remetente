@@ -26,7 +26,11 @@
   // Letter's closing signature(s)
   signature: [Sender's Name],
   // Content displayed in the colored band at the top of the page
-  header-band-content: text(fill: rgb("#2B58A2"), weight: "bold", size: 20pt)[Logo],
+  header-band-content: text(
+    fill: rgb("#2B58A2"),
+    weight: "bold",
+    size: 20pt,
+  )[Logo],
   // Only draw the header band on the first page
   first-page-header: true,
 )
