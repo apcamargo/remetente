@@ -148,9 +148,11 @@
 
   show link: set text(fill: link-font-color)
 
-  // If the header band is only drawn on the first page, the top margin
-  // of the first page must be increased to account for the band.
-  if first-page-header { v(header-band-clearance, weak: false) }
+  // Match the band clearance on the first page while retaining the
+  // smaller top margin on subsequent pages.
+  if first-page-header {
+    v(header-band-height + header-band-clearance - top-margin, weak: false)
+  }
 
   // Display the sender address, if any.
   if sender-address != none {
